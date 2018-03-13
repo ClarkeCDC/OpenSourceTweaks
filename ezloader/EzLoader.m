@@ -30,14 +30,17 @@
     [self launchapp];
 }
 
-
-
 - (void)launchapp {
-	// This doesnt work since
-	NSString* bundleIdentifier = "Bundle will go here";//the selected apps budnle will go here when applist is added
 
-	[[UIApplication sharedApplication] launchApplicationWithIdentifier:bundleIdentifier suspended:FALSE];
+    NSString *bundleID = [[NSBundle mainBundle] bundleIdentifier];
 
+    // Either this or whatever works from link after this
+    NSString *plistpath = @"/User/Library/Preferences/com.clarke1234.ezloaderpref.plist";
+    NSMutableDictionary *plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:plistpath];
+    if ([[plistDict objectForKey:bundleID] boolValue]) {
+        [[UIApplication sharedApplication] launchApplicationWithIdentifier:bundleID suspended:FALSE];
+				};
 
-}
+	}
+
 @end
