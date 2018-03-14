@@ -1,5 +1,5 @@
 #import "EzCydiaOpener.h"
-#import <spawn.h>
+#import "spawn.h"
 
 @interface UIApplication (PrivateMethods)
 - (BOOL)launchApplicationWithIdentifier:(NSString *)identifier suspended:(BOOL)suspend;
@@ -15,7 +15,7 @@
 }
 
 - (UIColor *)selectedColor {
-	return [UIColor blueColor];
+	return nil;// not much point having this as it can confuse people
 }
 
 - (BOOL)isSelected {
@@ -31,7 +31,6 @@
 - (void)cydia {
   NSString *bundleID = @"com.saurik.Cydia";
   [[UIApplication sharedApplication] launchApplicationWithIdentifier:bundleID suspended:FALSE];
-
-
+	
 }
 @end
