@@ -81,8 +81,6 @@
 	return _specifiers;
 }
 
--(void)setLaunchApp{
-	[self tableView :apps];
-}
+
 
 @end

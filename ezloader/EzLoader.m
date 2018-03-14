@@ -16,9 +16,6 @@
 	return [UIImage imageNamed:@"Icon" inBundle:[NSBundle bundleForClass:[self class]]];
 }
 
-- (UIColor *)selectedColor {
-	return [UIColor blueColor];
-}
 
 - (BOOL)isSelected {
 	return self.EzLoader;
