@@ -2,70 +2,48 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>entry</key>
-	<dict>
-		<key>ALAllowsSelection</key>
-		<string>1</string>
-		<key>ALChangeNotification</key>
-		<string>com.rpetrich.applist.sample.notification</string>
-		<key>ALSectionDescriptors</key>
-		<array>
-			<dict>
-				<key>footer-title</key>
-				<string>Table cell to open Safari to Google</string>
-				<key>items</key>
-				<array>
-					<dict>
-						<key>action</key>
-						<string>launchURL</string>
-						<key>image</key>
-						<string>/Applications/Preferences.app/Safari.png</string>
-						<key>text</key>
-						<string>Google</string>
-						<key>url</key>
-						<string>http://www.google.com/</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>cell-class-name</key>
-				<string>ALSwitchCell</string>
-				<key>icon-size</key>
-				<string>29</string>
-				<key>predicate</key>
-				<string>isSystemApplication = TRUE</string>
-				<key>suppress-hidden-apps</key>
-				<string>1</string>
-				<key>title</key>
-				<string>System Applications</string>
-			</dict>
-			<dict>
-				<key>cell-class-name</key>
-				<string>ALSwitchCell</string>
-				<key>footer-title</key>
-				<string>© 2018 Clarke1234</string>
-				<key>icon-size</key>
-				<string>29</string>
-				<key>predicate</key>
-				<string>isSystemApplication = FALSE</string>
-				<key>suppress-hidden-apps</key>
-				<string>1</string>
-				<key>title</key>
-				<string>User Applications</string>
-			</dict>
-		</array>
-		<key>ALSettingsKeyPrefix</key>
-		<string>Settings-</string>
-		<key>ALSettingsPath</key>
-		<string>/var/mobile/Library/Preferences/com.clarke1234.ezloaderpref.plist</string>
-		<key>bundle</key>
-		<string>AppList</string>
-		<key>cell</key>
-		<string>PSLinkCell</string>
-		<key>isController</key>
-		<string>1</string>
-		<key>label</key>
-		<string>EzLoader</string>
-	</dict>
+	<key>items</key>
+	<array>
+		<dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.clarke1234.ezloader</string>
+            <key>key</key>
+            <string>enable</string>
+            <key>label</key>
+            <string>Enable</string>
+        </dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Select an app</string>
+			<key>icon</key>
+			<string>/Applications/Preferences.app/icon-table@2x.png</string>
+			<key>label</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>ALAllowsSelection</key>
+			<string>1</string>
+			<key>ALSingleEnabledMode</key>
+			<string>1</string>
+			<key>bundle</key>
+			<string>AppList</string>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>icon</key>
+			<string>/Applications/Preferences.app/icon.png</string>
+			<key>isController</key>
+			<string>1</string>
+			<key>label</key>
+			<string>Select App</string>
+			<key>ALChangeNotification</key>
+			<string>com.clarke1234.ezloaderpref/preferences.changed</string>
+		</dict>
+	</array>
 </dict>
 </plist>
