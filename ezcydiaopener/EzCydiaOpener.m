@@ -13,11 +13,11 @@
 - (UIImage *)iconGlyph {
 	return [UIImage imageNamed:@"Icon" inBundle:[NSBundle bundleForClass:[self class]]];
 }
-
+/*
 - (UIColor *)selectedColor {
-	return nil;// not much point having this as it can confuse people
+	return [UIColor blueColor]; not much point having this as it can confuse people
 }
-
+*/
 - (BOOL)isSelected {
 	return self.EzCydiaOpener;
 }
@@ -31,6 +31,7 @@
 - (void)cydia {
   NSString *bundleID = @"com.saurik.Cydia";
   [[UIApplication sharedApplication] launchApplicationWithIdentifier:bundleID suspended:FALSE];
-	
+	self.EzCydiaOpener = NO;
+
 }
 @end
