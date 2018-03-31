@@ -1,0 +1,9 @@
+Package: com.clarke1234.taptaprespring
+Name: TapTapRespring
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Respring your phone by double tapping the status bar.
+Maintainer: Clarke1234
+Author: Clarke1234
+Section: Tweaks
