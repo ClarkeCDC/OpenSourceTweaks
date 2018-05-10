@@ -1,0 +1,9 @@
+Package: com.auxilium.excitant
+Name: Auxilium
+Depends: mobilesubstrate, applist, preferenceloader
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Keep it secret, keep it safe.
+Maintainer: Auxilium
+Author: Auxilium
+Section: Tweaks
